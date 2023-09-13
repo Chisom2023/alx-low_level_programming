@@ -1,48 +1,26 @@
 #include <stdio.h>
 
 /**
-  * main - Fibonacci sequence up to a certain limit
+  *main - Lists all the nat num below 1024 (exc.) that are mult. of 3 or 5.
   *
-  * This prog cal and prints the Fib seq up to a certain limit.
+  * This prog cal the sum of all nat num below 1024 that are mult of 3 or 5
+  * and prints the result.
   *
-  * Return: 0 (Success)
+  * Return: Always 0.
   */
-
 int main(void)
 {
 
-unsigned long int i;
-unsigned long int bef = 1;
-unsigned long int aft = 2;
-unsigned long int l = 1000000000;
-unsigned long int bef1;
-unsigned long int bef2;
-unsigned long int aft1;
-unsigned long int aft2;
+int i, sum = 0;
 
-printf("%lu", bef);
-for (i = 1; i < 91; i++)
+for (i = 0; i < 1024; i++)
 {
-printf(", %lu", aft);
-aft += bef;
-bef = aft - bef;
+if ((i % 3) == 0 || (i % 5) == 0)
+sum += i;
 }
 
-bef1 = (bef / l);
-bef2 = (bef % l);
-aft1 = (aft / l);
-aft2 = (aft % l);
+printf("%d\n", sum);
 
-for (i = 92; i < 99; ++i)
-{
-printf(", %lu", aft1 + (aft2 / l));
-printf("%lu", aft2 % l);
-aft1 = aft1 + bef1;
-bef1 = aft1 - bef1;
-aft2 = aft2 + bef2;
-bef2 = aft2 - bef2;
-}
-printf("\n");
 return (0);
 
 }
