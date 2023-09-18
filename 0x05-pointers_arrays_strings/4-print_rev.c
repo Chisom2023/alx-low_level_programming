@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * _rev - the function name
+  * print_rev - the function name
   * @s : parameter of the function
   */
 
@@ -16,6 +16,6 @@ for (i = 0; s[i] != '\0'; i++)
 for (i = count - 1; i >= 0; i--)
 {
 	_putchar (s[i]);
-}
+g
 	_putchar ('\n');
 }
