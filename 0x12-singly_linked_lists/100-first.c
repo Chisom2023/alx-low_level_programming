@@ -1,13 +1,13 @@
 #include <stdio.h>
-
+void __constructor(void)__attribute__ ((constructor));
 /**
- * bmain - function executed bbefore main
- * Return; no return
+ * _constructor - executes before main()
+ *
+ * Return: void
  */
 
-void __attribute__ ((constructor)) bmain()
+void _constructor(void)
 {
 	printf("You're beat! and yet, you must allow, \n");
 	printf("I bore my house upon my back!\n");
-
 }
